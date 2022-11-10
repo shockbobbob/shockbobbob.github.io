@@ -1,0 +1,23 @@
+.imageboxsetter{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.styler{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.imagestyler{
+    width:100%; 
+    aspect-ratio: 1/1
+}
+
+.imagestyler:hover{
+    width: 1000%;
+    
+}

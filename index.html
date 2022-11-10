@@ -7,53 +7,15 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/w3images/parallax1.jpg');
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?w=2000");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./stylesheets/demo.css">
+<link rel="stylesheet" href="./stylesheets/myown.css">
+<link rel="stylesheet" href="./stylesheets/active.css">
 </head>
 <body>
+
+<!-- Unhide this! -->
+<script src="https://unpkg.com/scrollreveal"></script>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -62,7 +24,7 @@ body, html {
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Problem Statement </a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
@@ -79,37 +41,151 @@ body, html {
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+</div>
+
+
+
+<!-- New week stuff  -->
+
+
+
+
+
+
+
+<!-- First component is ScrollReveal JS -->
+<!-- Last Parallax: change the text and the image :D-->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <!-- For this activity, the data is in demo.css, edit the properties of bgimg-2 and make this transition your own -->
+      <span class="w3-xxlarge w3-text-white w3-wide"> DA week 3</span>
+    </div>
+  </div>
+
+
+
+<!-- Second Parallax Image for usable divisions -->
+<div class="bgimg-5 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide slideup">Animation with ScrollReveal</span>
+      <p class="w3-text-white w3-center slideup"> Building on Week 2</p>
+    </div>
+</div>
+
+
+  
+<!-- Intro exmaple -->
+<div class="w3-container w3-content w3-padding-64" id="about">
+  <h2 class="w3-center slideleft">How to implement animations</h2>
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter slideup">
+      <i class="fa fa-file-code-o w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Add Scripts</p>
+      <p>Create a Script folder and add the script.js</p>
+    </div>
+    <div class="w3-quarter slideup">
+      <i class="fa fa-chain w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Add links to reference it</p>
+      <p> Add < script src="./scripts/script.js"></script> to the bottom of the page <br>
+        and < script src="https://unpkg.com/scrollreveal"></script> to the top of the page
+
+      </p>
+    </div>
+    <div class="w3-quarter slideup">
+      <i class="fa fa-exclamation-circle w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Note</p>
+      <p>I added a space before the script so that it would not be an actual script so make sure to delete it</p>
+    </div>
+    <div class="w3-quarter slideup">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Make use of classes</p>
+      <p>I have programmed three classes: slideup, slideleft and  slideright into the javascript, use them for the appropriate transition</p>
+    </div>
   </div>
 </div>
 
-<!-- Container (About Section) -->
+
+<!-- Example of sliding in and out transition -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2 class="w3-center slideleft">More Information</h2>
   <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    <div class="w3-col m6 w3-center w3-padding-large slideleft">
+      <img src="./images/Frame 67.png" class="w3-round w3-image " alt="data" width="500" height="333">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Might want to label this one</b></p><br>
     </div>
 
     <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-col m6 w3-hide-small w3-padding-large slideright">
+        <h3>Simply copy paste this</h3>
+      <p> And you would have a website xd.</p>
+      <a target="_blank" href="https://random.dog/">Maybe link this to another html page you created :D</a>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+</div>
+
+<!-- Modify your own effects! -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h2 class="w3-center slideleft">Add the slideleft class to me!</h2>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large slideleft">
+      <img src="./images/Frame 66.png" class="w3-round w3-image " alt="data" width="500" height="333">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Add the slideleft class to me as well</b></p><br>
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large slideright">
+        <h3>Pay attention to where componenets slide in from!</h3>
+      <p> In general, elements on the left should slide in from the left(slideleft class). <br><br> Elements on the right should come in from the right(slideright class)</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Table example -->
+<div class="w3-container w3-content w3-padding-64 slideup">
+  <h5 class="w3-center">The whole division slides up together</h5>
+  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+    <tr>
+      <td>United States</td>
+      <td>65%</td>
+    </tr>
+    <tr>
+      <td>UK</td>
+      <td>15.7%</td>
+    </tr>
+    <tr>
+      <td>Russia</td>
+      <td>5.6%</td>
+    </tr>
+    <tr>
+      <td>Spain</td>
+      <td>2.1%</td>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>1.9%</td>
+    </tr>
+    <tr>
+      <td>France</td>
+      <td>1.5%</td>
+    </tr>
+  </table><br>
+</div>
+
+<!-- slideup effect on the entire division  -->
+<div class="w3-content w3-container w3-padding-64 slideup" style="border:5px solid red" id="bars">
+
+  <p class="w3-large w3-center w3-padding-16">Illustrated with a border</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Mission progress</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
   </div>
   <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
   <div class="w3-light-grey">
@@ -121,125 +197,79 @@ body, html {
   </div>
 </div>
 
+<!--Add your effects to the takeaway bar!-->
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
+    <!-- Add the slideup class to each of the elements below and achieve the effect -->
+  <div class="w3-quarter w3-section slideup">
+    <span class="w3-xlarge">--</span><br>
+    If multiple elements
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
+  <div class="w3-quarter w3-section slideup">
+    <span class="w3-xlarge">--</span><br>
+    with the same class
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
+  <div class="w3-quarter w3-section slideup">
+    <span class="w3-xlarge">--</span><br>
+    appear at the same time
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  <div class="w3-quarter w3-section slideup">
+      <span class="w3-xlarge">--</span><br>
+    they go one by one
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-    </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+<!-- Active classes in css -->
+<div class="bgimg-5 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <!-- For this activity, the data is in demo.css, edit the properties of bgimg-2 and make this transition your own -->
+      <span class="w3-xxlarge w3-text-white w3-wide">Active classes in css </span>
     </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-  </div>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
+<div class="w3-content w3-container w3-padding-64">
+    <h2 class="w3-center">Add active.css</h2>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large" style="height:fit-content; display:flex; align-items:center; justify-content:center">
+        <div class='mentorbox'>
+            <img class='mentorIcon' src="./images/REEEE.jpg">
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <h3>Link to the css file</h3>
+      <p> Add the line: < link rel="stylesheet" href="./stylesheets/myown.css"> 
+      </p>
     </div>
   </div>
 </div>
+
+
+<div class="w3-container w3-content w3-padding-64">
+    <h5 class="w3-center">Additional Resources</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr>
+        <td>ScrollReveal</td>
+        <td><a href="https://codepen.io/hellogracecho/pen/qBBWprY">Link</a></td>
+      </tr>
+      <tr>
+        <td>Css hover effects</td>
+        <td><a href="https://css-tricks.com/css-link-hover-effects/">Link</a></td>
+      </tr>
+    </table><br>
+  </div>
+
+
+
+
+
+
+
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -285,6 +315,17 @@ function toggleFunction() {
     }
 }
 </script>
+<!-- Unhide this! -->
+<script src="./scripts/script.js"></script>
+
 
 </body>
 </html>
+
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="./scripts/script.js"></script>
+<link rel="stylesheet" href="./stylesheets/active.css">
+
+
